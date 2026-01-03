@@ -34,3 +34,12 @@ rm cilium-linux-${CLI_ARCH}.tar.gz{,.sha256sum}
 cilium install --set ipam.operator.clusterPoolIPv4PodCIDRList="192.168.0.0/16"
 
 cilium status
+
+************ansbile follow up************
+
+update puplic ips on ansible ini file
+then run below commands:
+# for Cilium installaton
+ansible-playbook -i inventory.ini cilium-install.yml
+# for joining worker nodes to controlplane
+ansible-playbook -i inventory.ini worker-join.yml
