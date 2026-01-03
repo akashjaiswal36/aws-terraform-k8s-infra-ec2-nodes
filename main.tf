@@ -340,7 +340,7 @@ resource "aws_instance" "controlplan" {
 
 resource "aws_instance" "workernodes" {
   depends_on = [aws_instance.controlplan]
-  count = 2
+  count = var.num_workernodes
   ami           = "ami-02b8269d5e85954ef"
   instance_market_options {
     market_type = "spot"

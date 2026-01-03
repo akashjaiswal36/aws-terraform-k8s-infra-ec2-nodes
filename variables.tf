@@ -10,3 +10,7 @@ variable "instance_type" {
 variable "key_name" {
   default = "aws-key"
 }
+
+variable "num_workernodes" {
+    default = 2
+}
