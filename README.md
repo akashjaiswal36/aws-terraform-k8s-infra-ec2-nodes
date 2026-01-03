@@ -40,6 +40,6 @@ cilium status
 update puplic ips on ansible ini file
 then run below commands:
 # for Cilium installaton
-ansible-playbook -i inventory.ini install-cilium.yml
+ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i inventory.ini install-cilium.yml
 # for joining worker nodes to controlplane
 ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i inventory.ini worker-join.yml
