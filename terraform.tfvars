@@ -1,1 +1,1 @@
-num_workernodes = 1
+num_workernodes = 2
